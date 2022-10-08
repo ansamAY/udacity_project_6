@@ -1,5 +1,5 @@
 def toyou(x):
-    return "hi %s" % x
+	return "hi %s" % x
 
 
 def add(x):
@@ -7,4 +7,4 @@ def add(x):
 
 
 def subtract(x):
-    return x - 1
+	return x - 1

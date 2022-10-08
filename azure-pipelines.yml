@@ -14,8 +14,8 @@ variables:
   webAppName: 'ay-flask-ml-service'
 
   # Agent VM image name
-  ##vmImageName: 'ubuntu-latest'
-  pool: 'mypool'
+  vmImageName: 'ubuntu-latest'
+  ##pool: 'mypool'
   # Environment name
   environmentName: 'ay-flask-ml-service'
 
@@ -34,7 +34,8 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool: 'mypool'
+    pool:
+      vmImage: $(vmImageName)
     steps:
     - task: UsePythonVersion@0
       inputs:
@@ -69,7 +70,8 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    pool: 'mypool'
+    pool:
+      vmImage: $(vmImageName)
     environment: $(environmentName)
     strategy:
       runOnce:

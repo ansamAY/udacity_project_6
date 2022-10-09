@@ -23,7 +23,7 @@ variables:
   projectRoot: $(System.DefaultWorkingDirectory)
 
   # Python version: 3.6
- # pythonVersion: '3.6'
+  pythonVersion: '3.9'
   
   
 
@@ -39,10 +39,11 @@ stages:
     pool: 'mypool'
     steps:
     - task: UsePythonVersion@0
+      displayName: 'Use Python $(pythonVersion)'
       inputs:
-        versionSpec: '3.9' 
+        versionSpec: '$(pythonVersion)' 
         addToPath: true 
-    ##    architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
+        architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
    ## - task: UsePythonVersion@0
     ##  inputs:
       #Run actions/setup-python@v2.2.2
@@ -50,8 +51,7 @@ stages:
     #    architecture: x64
         
        # versionSpec: '$(pythonVersion)'
-     # displayName: 'Use Python $(pythonVersion)'
-
+      
     - script: |
         python -m venv antenv
         source antenv/bin/activate

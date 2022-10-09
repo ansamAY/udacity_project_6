@@ -24,7 +24,7 @@ variables:
 
   # Python version: 3.6
  # pythonVersion: '3.6'
-  pythonVersion: '3.5' 
+  pythonVersion: '3.4' 
   addToPath: true 
   architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
   

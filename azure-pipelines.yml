@@ -24,10 +24,10 @@ variables:
 
   # Python version: 3.6
  # pythonVersion: '3.6'
-  versionSpec: '3.x' 
+  pythonVersion: '3.x' 
   addToPath: true 
   architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
-  token: ***
+  
   
 
 ##    pool:

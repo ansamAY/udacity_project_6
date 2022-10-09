@@ -24,9 +24,6 @@ variables:
 
   # Python version: 3.6
  # pythonVersion: '3.6'
-  pythonVersion: '3.4' 
-  addToPath: true 
-  architecture: 'x64' # Options: x86, x64 (this argument applies only on Windows agents)
   
   
 
@@ -43,8 +40,12 @@ stages:
     steps:
     - task: UsePythonVersion@0
       inputs:
-        versionSpec: '$(pythonVersion)'
-      displayName: 'Use Python $(pythonVersion)'
+      #Run actions/setup-python@v2.2.2
+        python-version: 3.7
+        architecture: x64
+        token: ***
+       # versionSpec: '$(pythonVersion)'
+     # displayName: 'Use Python $(pythonVersion)'
 
     - script: |
         python -m venv antenv

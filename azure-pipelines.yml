@@ -23,7 +23,10 @@ variables:
   projectRoot: $(System.DefaultWorkingDirectory)
 
   # Python version: 3.6
-  pythonVersion: '3.6'
+ # pythonVersion: '3.6'
+  python-version: 3.7
+  architecture: x64
+  token: ***
 
 ##    pool:
     ##  vmImage: $(vmImageName)

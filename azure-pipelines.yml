@@ -11,13 +11,13 @@ variables:
   azureServiceConnectionId: '20858b90-cde6-4fe3-844f-741fda39cf99'
 
   # Web app name
-  webAppName: 'ay-flask-ml-service'
+  webAppName: 'ansam-flask-ml-webservices'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
   #pool: 'mypool'
   # Environment name
-  environmentName: 'ay-flask-ml-service'
+  environmentName: 'ansam-flask-ml-webservices'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
@@ -96,7 +96,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : ay-flask-ml-service'
+            displayName: 'Deploy Azure Web App : ansam-flask-ml-webservices'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)

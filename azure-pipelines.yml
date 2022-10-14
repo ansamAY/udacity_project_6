@@ -11,7 +11,7 @@ variables:
   azureServiceConnectionId: '20858b90-cde6-4fe3-844f-741fda39cf99'
 
   # Web app name
-  webAppName: 'ansam-flask-ml-webservices'
+  webAppName: 'ay-flask-ml-services'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -96,7 +96,7 @@ stages:
             displayName: 'Use Python version'
 
           - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App : ansam-flask-ml-webservices'
+            displayName: 'Deploy Azure Web App : ay-flask-ml-service'
             inputs:
               azureSubscription: $(azureServiceConnectionId)
               appName: $(webAppName)

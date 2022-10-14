@@ -17,7 +17,7 @@ variables:
   vmImageName: 'ubuntu-latest'
   #pool: 'mypool'
   # Environment name
-  environmentName: 'ansam-flask-ml-webservices'
+  environmentName: 'ay-flask-ml-service'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)

@@ -25,7 +25,7 @@ variables:
   # Python version: 3.6
   pythonVersion: '3.7'
   
-  pool:'mypool
+  pool:'mypool'
   #vmImage: $(vmImageName)
 
 
@@ -34,7 +34,7 @@ stages:
   displayName: Build stage
   jobs:
   - job: BuildJob
-    pool:'mypool
+    pool:'mypool'
     #  vmImage: $(vmImageName)
     steps:
     - task: UsePythonVersion@0
@@ -80,7 +80,7 @@ stages:
   condition: succeeded()
   jobs:
   - deployment: DeploymentJob
-    pool:'mypool
+    pool:'mypool'
       #vmImage: $(vmImageName)
     environment: $(environmentName)
     strategy:

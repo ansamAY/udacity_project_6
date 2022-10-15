@@ -51,7 +51,6 @@ stages:
       #Run actions/setup-python@v2.2.2
     #    python-version: 3.7
     #    architecture: x64
-        
        # versionSpec: '$(pythonVersion)'
       
     - script: |
